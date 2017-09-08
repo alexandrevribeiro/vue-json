@@ -1,0 +1,66 @@
+
+# Steps to configure TypeScript:
+
+1. Install the necessary packages:
+    npm i --save-dev typescript ts-loader vue-class-component vue-property-decorator
+
+2. Add the "tsconfig.json" file:
+    {
+        "compilerOptions": {
+        "lib": [
+            "dom",
+            "es5",
+            "es2015.promise",
+            "es2017"
+        ],
+        "module": "es2015",
+        "moduleResolution": "node",
+        "target": "es5",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true
+        }
+    }
+
+3. Change the  webpack config (usually the "webpack.base.conf.js" file)
+    
+    3.1 Add "ts-loader" as the first rule:
+    {
+        test: /\.ts$/,
+        exclude: /node_modules|vue\/src/,
+        loader: 'ts-loader',
+        options: {
+            appendTsSuffixTo: [/\.vue$/]
+        }
+    }
+
+    3.2 Add ".ts" to resolved extensions:
+        extensions: ['.ts', '.js', '.vue', '.json']
+
+4. Add the "esModule: true" config to "vue-loader.conf.js" so ".vue components"
+   are treated as modules:
+   loaders: [...]
+   esModule: true,
+
+5. Transform the Main entry point in a TypeScript file:    
+    5.1 Rename the "main.js" to "main.ts"
+    5.2 Change the entry point configured in the Webpack config from "main.js" to "main.ts":
+        entry: {
+            app: './src/main.ts'
+        },
+
+6. Change the components being imported into "main.ts" to be TS Components. Ex.:
+    
+    <script lang="ts">
+        import Vue from 'vue'
+        import Component from 'vue-class-component'
+
+        @Component
+        export default class App extends Vue { }
+    </script>
+
+7. When using "vue-router"...
+    7.1 Rename the router file to ".ts" (usually "src/router/index.js")
+    7.2 Change the components being imported to be TS Components (the same 
+    done in the "Step 6").
