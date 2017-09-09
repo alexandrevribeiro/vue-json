@@ -1,6 +1,22 @@
 {
     "name": "string",
-    "id": "identifier",
-    "required": "boolean",
-    "minLength":"number"
+    "id": "identifier",    
+    "metadata": {
+        "type": "object",
+        "object-props": {
+            "required": "boolean",
+            "minLength":"number",
+            "maxLength":"number",
+            "mask": "string"
+        }
+    },
+    "fields": {
+        "type": "array",
+        "item-type": "object",
+        "object-props": {
+            "name": "string",
+            "id": "identifier",
+            "displayName": "string"
+        }
+    }
 }

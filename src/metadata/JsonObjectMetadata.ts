@@ -1,7 +1,7 @@
 
 import JsonPropMetadata from './JsonPropMetadata'
 
-export default class JsonMetadata {
+export default class JsonObjectMetadata {
 
     propsMetadata: JsonPropMetadata[] = []
 }

@@ -15,10 +15,7 @@
   @Component
   export default class App extends Vue {
 
-    created() {
-
-      console.log(json);
-      
+    created() {      
       var metadata = JsonMetadataHelper.convertToJsonMetadata(json);
       console.log(metadata);
     }
