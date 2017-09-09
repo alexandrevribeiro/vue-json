@@ -1,5 +1,5 @@
 <template>
-    <div class="json-double-quote">
+    <div class="json-double-quote inline">
         <span>"</span><span><slot></slot></span><span>"</span>
     </div>
 </template>

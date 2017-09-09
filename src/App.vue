@@ -38,6 +38,7 @@
 
 .json-item {
   margin-left: 18px;
+  padding-bottom: 7px;
 }
 
 .json-prop-name {

@@ -1,12 +1,12 @@
 <template>
     <div class="json-value inline">
-        <json-value-string></json-value-string>
+        <json-value-string />
     </div>
 </template>
 
 <script lang="ts">
     import Vue from 'vue'
-    import { Component, Prop } from 'vue-property-decorator'
+    import { Component, Prop } from 'vue-property-decorator'    
     import JsonValueString from './JsonValueString.vue'
 
     @Component({
