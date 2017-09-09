@@ -1,0 +1,17 @@
+{
+    "name": { "type": "string" },
+    "id": { "type": "identifier" },
+    "required": { "type": "boolean" },
+    "minLength": { "type": "number" },
+    "fields": {
+        "type": "array",
+        "item-type": "object",
+        "object-props": {
+            "id": { "type": "identifier" },
+            "required": { "type": "boolean" },
+            "minLength": { "type": "number" }
+        }
+    },
+    "name2": "string",
+    "id2": "identifier"
+}

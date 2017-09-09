@@ -69,7 +69,7 @@
 of the project, so the TypeScript Compiler can understand that all .vue 
 modules extend from the Vue class.
     
-    Add the "vue-shim.d.ts" file to the "src/" (not required to be that folder):
+    Add the "typings.d.ts" file to the "src/" (not required to be that folder):
     declare module "*.vue" {
         import Vue from 'vue'
         export default typeof Vue

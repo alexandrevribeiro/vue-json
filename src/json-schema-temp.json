@@ -1,0 +1,6 @@
+{
+    "name": "string",
+    "id": "identifier",
+    "required": "boolean",
+    "minLength":"number"
+}

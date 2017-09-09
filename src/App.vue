@@ -9,9 +9,19 @@
 
   import Vue from 'vue'
   import Component from 'vue-class-component'
+  import * as json from './json-schema-temp.json'
+  import JsonMetadataHelper from './metadata/JsonMetadataHelper'
 
   @Component
   export default class App extends Vue {
+
+    created() {
+
+      console.log(json);
+      
+      var metadata = JsonMetadataHelper.convertToJsonMetadata(json);
+      console.log(metadata);
+    }
   }
 
 </script>
