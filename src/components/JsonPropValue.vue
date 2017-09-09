@@ -8,13 +8,17 @@
     import Vue from 'vue'
     import { Component, Prop } from 'vue-property-decorator'    
     import JsonValueString from './JsonValueString.vue'
+    import JsonValueNumber from './JsonValueNumber.vue'
+    import JsonValueBoolean from './JsonValueBoolean.vue'
 
     @Component({
         // props: { 
         //     value: any 
         // },
         components: {
-            JsonValueString
+            JsonValueString,
+            JsonValueNumber,
+            JsonValueBoolean
         }
     })
     export default class Json extends Vue {
