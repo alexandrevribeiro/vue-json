@@ -32,4 +32,16 @@
   display: inline-flex;
 }
 
+.json-container {
+  text-align: left;
+}
+
+.json-item {
+  margin-left: 18px;
+}
+
+.json-prop-name {
+  font-weight: bold;
+}
+
 </style>

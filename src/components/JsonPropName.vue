@@ -1,20 +1,20 @@
 <template>
     <div class="json-prop-name inline">
-        <json-double-quote>{{ name }}</json-double-quote>
+        <json-double-quotes>{{ name }}</json-double-quotes>
     </div>
 </template>
 
 <script lang="ts">
     import Vue from 'vue'
     import Component from 'vue-class-component'
-    import JsonDoubleQuote from './JsonDoubleQuote.vue'
+    import JsonDoubleQuotes from './JsonDoubleQuotes.vue'
 
     @Component({
         props: { 
             name: String 
         },
         components: {
-            JsonDoubleQuote
+            JsonDoubleQuotes
         }
     })
     export default class JsonProp extends Vue { }

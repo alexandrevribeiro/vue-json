@@ -9,5 +9,5 @@
     import Component from 'vue-class-component'
 
     @Component
-    export default class JsonDoubleQuote extends Vue { }
+    export default class JsonDoubleQuotes extends Vue { }
 </script>

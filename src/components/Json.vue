@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="json-container">
         <!-- TODO: Change it to use Dynamic components -->
         <div v-if="Array.isArray(jsonObject)"></div>
         <json-object v-else :jsonObj="jsonObject"></json-object>
@@ -9,7 +9,7 @@
 <script lang="ts">
     import Vue from 'vue'
     import { Component, Prop } from 'vue-property-decorator'
-    import JsonObject from './JsonObject'
+    import JsonObject from './JsonObject.vue'
 
     @Component({
         // props: {
