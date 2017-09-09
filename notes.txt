@@ -64,3 +64,13 @@
     7.1 Rename the router file to ".ts" (usually "src/router/index.js")
     7.2 Change the components being imported to be TS Components (the same 
     done in the "Step 6").
+
+8. Add a "tiny shim" to have a general declaration for all ".vue" files 
+of the project, so the TypeScript Compiler can understand that all .vue 
+modules extend from the Vue class.
+    
+    Add the "vue-shim.d.ts" file to the "src/" (not required to be that folder):
+    declare module "*.vue" {
+        import Vue from 'vue'
+        export default typeof Vue
+    }
