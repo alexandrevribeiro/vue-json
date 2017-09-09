@@ -1,14 +1,6 @@
 <template>
-    <div>
-        <div class="json-prop-name">
-            <span class="json-double-quotes">"</span>
-            <span class="json-prop-name">{{ name }}</span>
-            <span class="json-double-quotes">"</span>
-        </div>
-        <div class="json-colon">:</div>
-        <div class="json-value">
-            <json-value-string></json-value-string>
-        </div>
+    <div class="json-value inline">
+        <json-value-string></json-value-string>
     </div>
 </template>
 
@@ -18,16 +10,17 @@
     import JsonValueString from './JsonValueString.vue'
 
     @Component({
-        props: { 
-            value: any 
-        },
+        // props: { 
+        //     value: any 
+        // },
         components: {
             JsonValueString
         }
     })
     export default class Json extends Vue {
 
-        @Prop() value: String
+        @Prop([String, Number, Boolean, Object])
+        value: string | number | boolean | object
 
         get valueComponentName() {
             // TODO: implement it!

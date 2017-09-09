@@ -25,4 +25,11 @@
   color: #2c3e50;
   margin-top: 60px;
 }
+
+/* TODO: Add .css file and import it here */
+
+.inline {
+  display: inline-flex;
+}
+
 </style>

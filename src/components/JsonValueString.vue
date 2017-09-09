@@ -1,10 +1,6 @@
 <template>
-    <div>
-        <span class="json-double-quotes">"</span>
-        <div class="json-value">
-            <input type="text" name="test" id="test">
-        </div>
-        <span class="json-double-quotes">"</span>        
+    <div class="json-value">
+        <span>"</span><input type="text" name="test" id="test"><span>"</span>
     </div>
 </template>
 

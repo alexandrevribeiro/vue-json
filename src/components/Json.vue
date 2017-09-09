@@ -1,8 +1,8 @@
 <template>
     <div>
         <!-- TODO: Change it to use Dynamic components -->
-        <!-- <div v-if="Array.isArray(jsonObject)"></div>
-        <json-object v-else :jsonObj="jsonObject"></json-object> -->
+        <div v-if="Array.isArray(jsonObject)"></div>
+        <json-object v-else :jsonObj="jsonObject"></json-object>
     </div>
 </template>
 

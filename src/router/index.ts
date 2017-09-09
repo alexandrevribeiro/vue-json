@@ -6,8 +6,9 @@ import Json from '@/components/Json'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     { path: '/', name: 'Hello', component: Hello },
-    { path: '/', name: 'json', component: Json }
+    { path: '/json', name: 'json', component: Json }
   ]
 })
