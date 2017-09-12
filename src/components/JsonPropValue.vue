@@ -1,12 +1,14 @@
 <template>
     <div class="json-value inline">
-        <json-value-string />
+        <!-- Dynamically loads the right component -->
+        <component :is="valueComponentName"></component>
     </div>
 </template>
 
 <script lang="ts">
     import Vue from 'vue'
-    import { Component, Prop } from 'vue-property-decorator'    
+    import { Component, Prop } from 'vue-property-decorator' 
+    import JsonPropTypeEnum from '../metadata/JsonPropTypeEnum'  
     import JsonPropMetadata from '../metadata/JsonPropMetadata'
     import JsonValueString from './JsonValueString.vue'
     import JsonValueNumber from './JsonValueNumber.vue'
@@ -23,13 +25,28 @@
         }
     })
     export default class Json extends Vue {
-
+        
         @Prop()
         propMetadata: JsonPropMetadata
 
         get valueComponentName() {
-            // TODO: implement it!
-            throw new Error();
+            
+            switch (this.propMetadata.type) {
+                case JsonPropTypeEnum.String:
+                    return 'json-value-string';
+
+                case JsonPropTypeEnum.Number:
+                    return 'json-value-number';
+
+                case JsonPropTypeEnum.Boolean:
+                    return 'json-value-boolean';
+
+                case JsonPropTypeEnum.Object:
+                    throw new Error('Not implemented!');
+            
+                default:
+                    return 'json-value-string';
+            }
         }
      }
 </script>

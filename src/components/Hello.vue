@@ -5,7 +5,7 @@
 <script lang="ts">
   import Vue from 'vue'
   import Component from 'vue-class-component'
-  import * as json from '@/json-schema-temp.json'
+  import * as json from '@/json-schema.json'
   import Json from './Json.vue'
   import JsonObjectMetadata from '../metadata/JsonObjectMetadata'
   import JsonMetadataHelper from '../metadata/JsonMetadataHelper'

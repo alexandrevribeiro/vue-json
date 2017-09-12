@@ -16,7 +16,7 @@
 <script lang="ts">
     import Vue from 'vue'
     import { Component, Prop } from 'vue-property-decorator'
-    import JsonObjectMetadata from '../metadata/JsonObjectMetadata'
+    import JsonObjectMetadata from '../metadata/JsonObjectMetadata'    
     import JsonBraces from './JsonBraces.vue'
     import JsonColon from './JsonColon.vue'
     import JsonComma from './JsonComma.vue'
