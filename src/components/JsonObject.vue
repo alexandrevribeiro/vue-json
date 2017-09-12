@@ -2,7 +2,7 @@
     <div class="json-object">
         <json-braces>
             <div class="json-item"
-                v-for="propMetadata in jsonObjMetadata.propsMetadata" 
+                v-for="(propMetadata, index) in jsonObjMetadata.propsMetadata" 
                 :key="propMetadata.name">        
                 <json-prop-name :name="propMetadata.name"></json-prop-name>
                 <json-colon></json-colon>
@@ -24,9 +24,6 @@
     import JsonPropValue from './JsonPropValue.vue'
 
     @Component({
-        props: {
-            jsonObjMetadata: JsonObjectMetadata
-        },
         components: {
             JsonBraces,
             JsonColon,

@@ -1,6 +1,6 @@
 <template>
     <div class="json-container">        
-        <json-object :jsonObj="jsonObjectMetadata"></json-object>
+        <json-object :jsonObjMetadata="jsonObjMetadata"></json-object>
     </div>
 </template>
 
@@ -11,15 +11,14 @@
     import JsonObjectMetadata from '../metadata/JsonObjectMetadata'
 
     @Component({
-        props: {
-            jsonObjectMetadata: JsonObjectMetadata
-        },
         components: {
             JsonObject
         }
     })
     export default class Json extends Vue {
         
+        @Prop({required: true}) 
+        jsonObjMetadata: JsonObjectMetadata
         
      }
 </script>
