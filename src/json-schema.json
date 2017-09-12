@@ -3,5 +3,14 @@
     "required": "boolean",
     "minLength":"number",
     "maxLength":"number",
-    "mask": "string"
+    "mask": "string",
+    "metadata": {
+        "type": "object",
+        "object-props": {
+            "required": "boolean",
+            "minLength":"number",
+            "maxLength":"number",
+            "mask": "string"
+        }
+    }
 }
