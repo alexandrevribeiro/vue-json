@@ -1,6 +1,9 @@
 
 import JsonPropMetadata from './JsonPropMetadata'
 
+/**
+ * Represents the metadata of a JSON Object
+ */
 export default class JsonObjectMetadata {
 
     /**

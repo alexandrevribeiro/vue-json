@@ -88,13 +88,13 @@ export default class JsonMetadataHelper {
             if (!keys.includes(ObjectPropNames.ITEM_TYPE))
                 throw new Error(`The '${ObjectPropNames.ITEM_TYPE}' property is required when the '${ObjectPropNames.TYPE}' is 'array'. Parent property: '${propName}'.`);
 
-            // Sets the "itemType"
+            // Sets the "arrayItemType"
             let itemTypeValue = objectValue[ObjectPropNames.ITEM_TYPE];
-            jsonPropMetadata.itemType = JsonMetadataHelper
+            jsonPropMetadata.arrayItemType = JsonMetadataHelper
                 .getPropType(itemTypeValue);            
 
             // Validates if the "object-props" was specified
-            if (jsonPropMetadata.itemType == JsonPropType.Object && !objectPropsWasSpecified)
+            if (jsonPropMetadata.arrayItemType == JsonPropType.Object && !objectPropsWasSpecified)
                 throw new Error(`The '${ObjectPropNames.OBJECT_PROPS}' property is required when the '${ObjectPropNames.ITEM_TYPE}' is 'object'. Parent property: '${propName}'.`);            
         } 
         else if (propType == JsonPropType.Object && !objectPropsWasSpecified) {
