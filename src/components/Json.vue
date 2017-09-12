@@ -1,8 +1,6 @@
 <template>
-    <div class="json-container">
-        <!-- TODO: Change it to use Dynamic components -->
-        <div v-if="Array.isArray(jsonObject)"></div>
-        <json-object v-else :jsonObj="jsonObject"></json-object>
+    <div class="json-container">        
+        <json-object :jsonObj="jsonObjectMetadata"></json-object>
     </div>
 </template>
 
@@ -10,22 +8,18 @@
     import Vue from 'vue'
     import { Component, Prop } from 'vue-property-decorator'
     import JsonObject from './JsonObject.vue'
+    import JsonObjectMetadata from '../metadata/JsonObjectMetadata'
 
     @Component({
-        // props: {
-        //     json: String
-        // },
+        props: {
+            jsonObjectMetadata: JsonObjectMetadata
+        },
         components: {
             JsonObject
         }
     })
     export default class Json extends Vue {
         
-        // @Prop() json: string
-        json: string = '{"name": "person","fields": "test"}'
-
-        get jsonObject() {
-            return JSON.parse(this.json);
-        }
+        
      }
 </script>

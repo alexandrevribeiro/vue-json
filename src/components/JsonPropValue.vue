@@ -7,14 +7,15 @@
 <script lang="ts">
     import Vue from 'vue'
     import { Component, Prop } from 'vue-property-decorator'    
+    import JsonPropMetadata from '../metadata/JsonPropMetadata'
     import JsonValueString from './JsonValueString.vue'
     import JsonValueNumber from './JsonValueNumber.vue'
     import JsonValueBoolean from './JsonValueBoolean.vue'
 
     @Component({
-        // props: { 
-        //     value: any 
-        // },
+        props: { 
+            propMetadata: JsonPropMetadata 
+        },
         components: {
             JsonValueString,
             JsonValueNumber,
@@ -23,8 +24,8 @@
     })
     export default class Json extends Vue {
 
-        @Prop([String, Number, Boolean, Object])
-        value: string | number | boolean | object
+        @Prop()
+        propMetadata: JsonPropMetadata
 
         get valueComponentName() {
             // TODO: implement it!
