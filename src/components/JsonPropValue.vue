@@ -22,7 +22,7 @@
             JsonValueString,
             JsonValueNumber,
             JsonValueBoolean,
-            'json-object': JsonObject
+            JsonObject
         }
     })
     export default class Json extends Vue {
