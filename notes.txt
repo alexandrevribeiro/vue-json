@@ -40,7 +40,7 @@
 
 4. Add the "esModule: true" config to "vue-loader.conf.js" so ".vue components"
    are treated as modules:
-   loaders: [...]
+   loaders: [...],
    esModule: true,
 
 5. Transform the Main entry point in a TypeScript file:    
@@ -52,6 +52,7 @@
 
 6. Change the components being imported into "main.ts" to be TS Components. Ex.:
     
+    App.vue
     <script lang="ts">
         import Vue from 'vue'
         import Component from 'vue-class-component'

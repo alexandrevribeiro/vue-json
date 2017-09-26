@@ -2,6 +2,7 @@
     <div class="json-value inline">
         <!-- Dynamically loads the right component -->
         <component :is="valueComponentName" v-bind="valueComponentProps"></component>
+
     </div>
 </template>
 
@@ -13,14 +14,15 @@
     import JsonValueString from './JsonValueString.vue'
     import JsonValueNumber from './JsonValueNumber.vue'
     import JsonValueBoolean from './JsonValueBoolean.vue'
-    import JsonObject from './JsonObject.vue'
+    const JsonObject = () => import('./JsonObject.vue')
 
     @Component({
+        name: 'json-prop-value',
         components: {
             JsonValueString,
             JsonValueNumber,
             JsonValueBoolean,
-            JsonObject
+            'json-object': JsonObject
         }
     })
     export default class Json extends Vue {

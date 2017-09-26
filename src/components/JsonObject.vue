@@ -24,6 +24,7 @@
     import JsonPropValue from './JsonPropValue.vue'
 
     @Component({
+        name: 'json-object',
         components: {
             JsonBraces,
             JsonColon,

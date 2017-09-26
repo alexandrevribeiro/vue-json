@@ -6,9 +6,9 @@
 
 <script lang="ts">
     import Vue from 'vue'
-    import { Component, Prop } from 'vue-property-decorator'
-    import JsonObject from './JsonObject.vue'
+    import { Component, Prop } from 'vue-property-decorator'    
     import JsonObjectMetadata from '../metadata/JsonObjectMetadata'
+    const JsonObject = () => import('./JsonObject.vue')
 
     @Component({
         components: {
